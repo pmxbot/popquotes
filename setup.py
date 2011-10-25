@@ -7,9 +7,17 @@ setup_params = dict(
 	packages=find_packages(),
 	namespace_packages=[''],
 	zip_safe=False,
+	install_requires=[
+		'pmxbot>=1100',
+	],
 	setup_requires=[
 		'hgtools',
 	],
+	entry_points = dict(
+		pmxbot_handlers = [
+			'popular_quotes = popquotes.pmxbot:install_commands',
+		],
+	),
 )
 if __name__ == '__main__':
 	from setuptools import setup
