@@ -36,9 +36,12 @@ quote_libs = (
 
 # create the popquotes commands per the declarations above
 def make_command(name, aliases, doc, lib):
+	# create a command function with the pmxbot command signature
 	cmd_func = lambda client, event, channel, nick, rest: bartletts(lib, nick, rest)
-	cmd_func = command(name, aliases=aliases, doc=doc)(cmd_func)
-	globals().update({name: cmd_func})
+	# register the new func as a command
+	pmxbot_cmd = command(name, aliases=aliases, doc=doc)(cmd_func)
+	# add the command to the global namespace so it can be tested
+	globals().update({name: pmxbot_cmd})
 
 def install_commands():
 	list(itertools.starmap(make_command, quote_libs))
