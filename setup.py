@@ -5,7 +5,6 @@ setup_params = dict(
 	name='popquotes',
 	use_hg_version=True,
 	packages=find_packages(),
-	namespace_packages=[''],
 	zip_safe=False,
 	install_requires=[
 		'pmxbot>=1100',
