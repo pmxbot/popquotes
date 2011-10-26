@@ -2,6 +2,9 @@
 from setuptools import find_packages
 setup_params = dict(
 	name='popquotes',
+	url="https://bitbucket.org/yougov/popquotes",
+	author="YouGov, plc.",
+	author_email="you",
 	description="Popular Quotes database",
 	use_hg_version=True,
 	packages=find_packages(),
