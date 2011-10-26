@@ -8,6 +8,7 @@ setup_params = dict(
 	description="Popular Quotes database",
 	use_hg_version=True,
 	packages=find_packages(),
+	include_package_data=True,
 	zip_safe=False,
 	install_requires=[
 		'pmxbot>=1100',
