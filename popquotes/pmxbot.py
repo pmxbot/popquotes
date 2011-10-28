@@ -12,14 +12,14 @@ def bartletts(lib, nick, qsearch):
 	qsearch = qsearch.strip()
 	if nick == 'pmxbot':
 		qt, i, n = qs.quoteLookup()
-		if qt:
-			if qt.find(':', 0, 15) > -1:
-				qt = qt.split(':', 1)[1].strip()
-			return qt
+		if not qt: return
+		if qt.find(':', 0, 15) > -1:
+			qt = qt.split(':', 1)[1].strip()
 	else:
 		qt, i, n = qs.quoteLookupWNum(qsearch)
-		if qt:
-			return u'(%s/%s): %s' % (i, n, qt)
+		if not qt: return
+		qt = u'(%s/%s): %s' % (i, n, qt)
+	return qt
 
 # declare all of the popquotes commands
 quote_libs = (
