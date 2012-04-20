@@ -11,7 +11,7 @@ setup_params = dict(
 	include_package_data=True,
 	zip_safe=False,
 	install_requires=[
-		'pmxbot>=1100',
+		'pmxbot>=1101.3dev',
 	],
 	setup_requires=[
 		'hgtools',
