@@ -41,7 +41,7 @@ def make_command(name, aliases, doc, lib):
 	# register the new func as a command
 	pmxbot_cmd = command(name, aliases=aliases, doc=doc)(cmd_func)
 	# add the command to the global namespace so it can be tested
-	globals().update({name: pmxbot_cmd})
+	globals()[name] = pmxbot_cmd
 
 def install_commands():
 	list(itertools.starmap(make_command, quote_libs))

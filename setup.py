@@ -18,7 +18,7 @@ setup_params = dict(
 	],
 	entry_points = dict(
 		pmxbot_handlers = [
-			'popular_quotes = popquotes.pmxbot:install_commands',
+			'popular quotes = popquotes.pmxbot:install_commands',
 		],
 	),
 )
