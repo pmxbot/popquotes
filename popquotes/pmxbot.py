@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 import itertools
 
-from pmxbot.botbase import command
+from pmxbot.core import command
 
 import popquotes
 

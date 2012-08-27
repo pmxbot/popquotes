@@ -1,6 +1,6 @@
 import re
 
-import pmxbot.botbase
+import pmxbot.core
 
 import popquotes.pmxbot
 
@@ -14,7 +14,6 @@ def test_bender():
 	assert quote_pattern.match(res)
 
 def test_registered():
-	handlers = pmxbot.botbase._handler_registry
+	handlers = pmxbot.core._handler_registry
 	all_names = [handler[1] for handler in handlers]
 	assert 'bender' in all_names
-
