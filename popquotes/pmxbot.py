@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import itertools
 
@@ -18,7 +18,7 @@ def bartletts(lib, nick, qsearch):
 	else:
 		qt, i, n = qs.quoteLookupWNum(qsearch)
 		if not qt: return
-		qt = u'(%s/%s): %s' % (i, n, qt)
+		qt = '(%s/%s): %s' % (i, n, qt)
 	return qt
 
 # declare all of the popquotes commands
