@@ -1,6 +1,2 @@
-syntax: glob
-*.pyc
-*.pyo
-__pycache__
 build
 dist
