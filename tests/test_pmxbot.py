@@ -1,4 +1,5 @@
 import re
+import operator
 
 import pmxbot.core
 
@@ -14,6 +15,6 @@ def test_bender():
 	assert quote_pattern.match(res)
 
 def test_registered():
-	handlers = pmxbot.core._handler_registry
-	all_names = [handler[1] for handler in handlers]
+	handlers = pmxbot.core.Handler._registry
+	all_names = map(operator.attrgetter('name'), handlers)
 	assert 'bender' in all_names
