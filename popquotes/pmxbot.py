@@ -18,7 +18,7 @@ def bartletts(lib, nick, qsearch):
 		if qt.find(':', 0, 15) > -1:
 			qt = qt.split(':', 1)[1].strip()
 	else:
-		qt, i, n = qs.quoteLookupWNum(qsearch)
+		qt, i, n = qs.lookup_with_num(qsearch)
 		if not qt:
 			return
 		qt = '(%s/%s): %s' % (i, n, qt)
