@@ -31,15 +31,15 @@ params = dict(
 		name.split('.')[:-1] if nspkg_technique == 'managed'
 		else []
 	),
-	python_requires='>=2.7',
+	python_requires='>=3.4',
 	install_requires=[
+		'pmxbot',
 	],
 	extras_require={
 		'testing': [
 			'pytest>=2.8',
 			'pytest-sugar>=0.9.1',
 			'collective.checkdocs',
-			'pmxbot',
 		],
 		'docs': [
 			'sphinx',
@@ -54,7 +54,6 @@ params = dict(
 		"Development Status :: 5 - Production/Stable",
 		"Intended Audience :: Developers",
 		"License :: OSI Approved :: MIT License",
-		"Programming Language :: Python :: 2.7",
 		"Programming Language :: Python :: 3",
 	],
 	entry_points={
